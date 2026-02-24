@@ -1,0 +1,64 @@
+{
+  "lastUpdated": "2026-02-09T00:00:00Z",
+  "datasets": [
+    {
+      "slug": "medicaid-provider-spending",
+      "title": "Medicaid Provider Spending",
+      "description": "Provider-level Medicaid spending data from T-MSIS, aggregated by billing or servicing provider, procedure code, and month. Covers fee-for-service, managed care, and CHIP claims from 2018-2024.",
+      "tags": ["medicaid", "t-msis", "claims", "providers", "spending"],
+      "versions": [
+        {
+          "version": "2026-02-09",
+          "releaseNotes": "Initial release with data from January 2018 through December 2024",
+          "files": [
+            {
+              "name": "medicaid-provider-spending.csv",
+              "format": "csv",
+              "size": 11086231433,
+              "url": "https://stopendataprod.blob.core.windows.net/datasets/medicaid-provider-spending/2026-02-09/medicaid-provider-spending.csv",
+              "checksum": "sha256:17af91c0b8d58ed217c3349779f2bdbb392ecc63cfbf6ce9b016088d42b16b9b"
+            },
+            {
+              "name": "medicaid-provider-spending.csv.zip",
+              "format": "zip",
+              "size": 3606925714,
+              "url": "https://stopendataprod.blob.core.windows.net/datasets/medicaid-provider-spending/2026-02-09/medicaid-provider-spending.csv.zip",
+              "checksum": "sha256:0816f7b67234e24e65ab3be533195ca21780628baae173c894f2a8a6436b19dc"
+            },
+            {
+              "name": "medicaid-provider-spending.parquet",
+              "format": "parquet",
+              "size": 2940234191,
+              "url": "https://stopendataprod.blob.core.windows.net/datasets/medicaid-provider-spending/2026-02-09/medicaid-provider-spending.parquet",
+              "checksum": "sha256:a998e5ae11a391f1eb0d8464b3866a3ee7fe18aa13e56d411c50e72e3a0e35c7"
+            },
+            {
+              "name": "medicaid-provider-spending.vortex",
+              "format": "vortex",
+              "size": 3430832888,
+              "url": "https://stopendataprod.blob.core.windows.net/datasets/medicaid-provider-spending/2026-02-09/medicaid-provider-spending.vortex",
+              "checksum": "sha256:a130afcf3345d4a01d4c021a22d52595022a153089935be4c4a0714b283dbd53"
+            },
+            {
+              "name": "medicaid-provider-spending.duckdb",
+              "format": "duckdb",
+              "size": 3714854912,
+              "url": "https://stopendataprod.blob.core.windows.net/datasets/medicaid-provider-spending/2026-02-09/medicaid-provider-spending.duckdb",
+              "checksum": "sha256:a1a385129d9510571ab903f62c4cae79be1316a992ac5496b7cf1cafc4e0b67d"
+            }
+          ],
+          "schema": [
+            { "name": "BILLING_PROVIDER_NPI_NUM", "type": "string", "description": "National Provider Identifier of the billing provider" },
+            { "name": "SERVICING_PROVIDER_NPI_NUM", "type": "string", "description": "National Provider Identifier of the servicing provider" },
+            { "name": "HCPCS_CODE", "type": "string", "description": "Healthcare Common Procedure Coding System code for the service" },
+            { "name": "CLAIM_FROM_MONTH", "type": "date", "description": "Month for which claims are aggregated (YYYY-MM-01 format)" },
+            { "name": "TOTAL_UNIQUE_BENEFICIARIES", "type": "integer", "description": "Count of unique beneficiaries for this provider/procedure/month" },
+            { "name": "TOTAL_CLAIMS", "type": "integer", "description": "Total number of claim lines for this provider/procedure/month" },
+            { "name": "TOTAL_PAID", "type": "float", "description": "Total amount paid by Medicaid (in USD)" }
+          ]
+        }
+      ],
+      "publishedAt": "2026-02-09"
+    }
+  ]
+}
